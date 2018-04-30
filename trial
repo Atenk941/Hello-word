@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Karyawan {
+    public static void main(String[] args) {
+        
+        int jam;
+        double gaji,totalgaji,plus,minus,sisa;
+        String nama;
+        
+        Scanner masukan = new Scanner (System.in);
+        System.out.println("Gaji Karyawan PT. Milan Indo Tbk");
+        System.out.println("================================");
+        System.out.print("Masukan nama : ");
+        nama = masukan.next();
+        System.out.print("Masukan Total Jam Kerja Anda/Minggu : ");
+        jam = masukan.nextInt();
+        
+        if (jam<40){
+            sisa = jam;
+            gaji = jam*5000;
+            minus = sisa*2500;
+            totalgaji = gaji-minus;
+        System.out.println("\n");
+        System.out.println("Slip Gaji "+nama);
+        System.out.println("Waktu Kerja     : " +sisa+ " jam");
+        System.out.println("Bonus                : - ");
+        System.out.println("Potongan           :Rp"+minus);
+        System.out.println("Gaji/Minggu     :Rp"+gaji+" - Rp"+minus+" = Rp"+totalgaji);}
+                
+        else if (jam>70) {
+            sisa = jam;
+            gaji = jam*5000;
+            plus = sisa*2500;
+            totalgaji = gaji+plus;
+        System.out.println("\n");
+        System.out.println("Slip Gaji "+nama);
+        System.out.println("Waktu Kerja      : " +sisa+ " jam");
+        System.out.println("Bonus                : Rp"+plus);
+        System.out.println("Potongan           : - ");
+        System.out.println("Gaji/Minggu     : Rp"+gaji+" + Rp" +plus+" = Rp"+totalgaji);} 
+        
+       
+
+
+
+        else {
+            sisa = jam;
+            totalgaji = jam*5000;
+        System.out.println("\n");
+        System.out.println("Slip Gaji "+nama);
+        System.out.println("waktu Kerja      : " +sisa+ " jam");
+        System.out.println("Bonus                : - ");
+        System.out.println("Potongan           : - ");
+        System.out.println("Gaji/Minggu     :Rp5000 X "+sisa+" jam = Rp"+totalgaji);}
+        
+        System.out.println("\n");
+        System.out.println("-> Muhamad Solekhudin <-");
+    }
+}
